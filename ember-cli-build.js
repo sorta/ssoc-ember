@@ -8,6 +8,7 @@ module.exports = function(defaults) {
       compile: {
         enabled: true,
         plugins: [
+          { module: require('postcss-import') },
           require('tailwindcss')('./config/tailwind.js'),
         ]
       }

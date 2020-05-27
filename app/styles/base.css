@@ -1,0 +1,6 @@
+@import "fonts";
+
+:root,
+html {
+  @apply font-sans;
+}
