@@ -2,5 +2,19 @@
 
 :root,
 html {
-  @apply font-sans;
+  @apply font-sans bg-yellow text-grey text-min;
+}
+
+@screen sm {
+  :root,
+  html {
+    font-size: calc(18px + (22 - 18) * ((100vw - 600px)/(1200 - 600)));
+  }
+}
+
+@screen lg {
+  :root,
+  html {
+    @apply text-max;
+  }
 }

@@ -32,7 +32,12 @@ module.exports = {
     },
 
     // Extends //////////////////////////////////////////
-    extend: {},
+    extend: {
+      fontSize: {
+        min: '112.5%',
+        max: '137.5%',
+      }
+    },
   },
   variants: {},
   plugins: []
