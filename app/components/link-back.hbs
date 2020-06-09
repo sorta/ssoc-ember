@@ -1,0 +1,10 @@
+<span
+  {{on 'click' this.goBack}}
+  class="cursor-pointer"
+>
+  {{#if (has-block)}}
+    {{~ yield ~}}
+  {{else}}
+    Go Back
+  {{/if}}
+</span>
