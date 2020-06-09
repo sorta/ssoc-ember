@@ -20,5 +20,5 @@ html {
 }
 
 body {
-  @apply min-h-screen flex flex-col;
+  @apply min-h-screen flex flex-col items-center;
 }

@@ -1,3 +1,11 @@
+.nav-link {
+  @apply text-3xl font-bold;
+}
+
 .nav-link.active {
   @apply underline;
+}
+
+.nav-link:not(:first-of-type):not(:last-of-type) {
+  @apply mx-4;
 }

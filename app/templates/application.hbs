@@ -1,4 +1,4 @@
-<header class="colors-reverse py-2 px-3 font-serif flex flex-col md:flex-row items-center justify-between">
+<header class="w-full colors-reverse py-2 px-3 font-serif flex flex-col md:flex-row items-center justify-between">
   <LinkTo @route='index' class="flex">
     <div class="w-16 mr-2">
       {{svg-jar "logo"}}
@@ -8,20 +8,18 @@
       <div class="text-2xl">Web Developer</div>
     </div>
   </LinkTo>
-  <nav class="text-3xl font-bold mt-4 md:mt-0">
+  <nav class="mt-4 md:mt-0">
     <LinkTo @route='index' class="nav-link">Home</LinkTo>
-    <span class="nav-link mx-4">Work</span>
-    <span class="nav-link">About</span>
-    {{!-- <LinkTo @route='work' class="nav-link">Work</LinkTo> --}}
-    {{!-- <LinkTo @route='about' class="nav-link">About</LinkTo> --}}
+    <LinkTo @route='work' class="nav-link">Work</LinkTo>
+    <LinkTo @route='about' class="nav-link">About</LinkTo>
   </nav>
 </header>
 
-<main class="flex-auto">
+<main class="container flex-auto py-8 px-3">
   {{outlet}}
 </main>
 
-<footer class="colors-reverse flex justify-between py-1 px-3">
-  <span>&copy; Sophie Orta 2020</span>
+<footer class="w-full colors-reverse flex justify-between py-1 px-3">
+  <span>&copy; Sophie Orta {{this.year}}</span>
   <a href="https://rebrand.ly/jd73ytjf7" download class="font-bold">Resume</a>
 </footer>
