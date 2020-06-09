@@ -9,3 +9,7 @@
 .nav-link:not(:first-of-type):not(:last-of-type) {
   @apply mx-4;
 }
+
+.container {
+  @apply px-3;
+}

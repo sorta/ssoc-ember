@@ -20,7 +20,7 @@ html {
 }
 
 body {
-  @apply min-h-screen flex flex-col items-center;
+  @apply min-h-screen flex flex-col;
 }
 
 h1, .h1 {

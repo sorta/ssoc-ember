@@ -15,11 +15,11 @@
   </nav>
 </header>
 
-<main class="container flex-auto py-8 px-3" data-test-layout-main-content>
+<main class="flex-auto py-8 flex flex-col items-center" data-test-layout-main-content>
   {{yield}}
 </main>
 
-<footer class="w-full colors-reverse flex justify-between py-1 px-3">
+<footer class="colors-reverse flex justify-between py-1 px-3">
   <span data-test-layout-main-copyright>&copy; Sophie Orta {{this.year}}</span>
   <a href="https://rebrand.ly/jd73ytjf7" class="font-bold" download data-test-layout-main-resume-link>Resume</a>
 </footer>
