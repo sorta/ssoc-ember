@@ -22,3 +22,7 @@ html {
 body {
   @apply min-h-screen flex flex-col items-center;
 }
+
+h1, .h1 {
+  @apply text-5xl font-serif mb-8;
+}
