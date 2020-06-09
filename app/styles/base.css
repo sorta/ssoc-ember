@@ -18,3 +18,7 @@ html {
     @apply text-max;
   }
 }
+
+body {
+  @apply min-h-screen flex flex-col;
+}

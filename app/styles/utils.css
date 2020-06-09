@@ -1,0 +1,3 @@
+.colors-reverse {
+  @apply bg-grey text-yellow;
+}
