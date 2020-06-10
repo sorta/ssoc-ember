@@ -43,6 +43,11 @@ module.exports = {
       '4xl': '3.6rem',
     },
 
+    borderRadius: {
+      default: '0.5rem',
+      lg: '1rem',
+    },
+
     // Extends //////////////////////////////////////////
     extend: {
     },

@@ -2,7 +2,7 @@
 
 :root,
 html {
-  @apply font-sans bg-yellow text-grey text-min;
+  @apply font-sans bg-yellow text-grey text-min leading-tight;
 }
 
 @screen sm {
@@ -50,4 +50,12 @@ p, .paragraph {
     text-align-last: left;
     text-align-last: start;
   }
+}
+
+dt {
+  @apply font-bold;
+}
+
+dd {
+  @apply ml-6 mb-2;
 }
