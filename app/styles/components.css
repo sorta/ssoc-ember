@@ -1,5 +1,5 @@
 .nav-link {
-  @apply text-3xl font-bold;
+  @apply text-xl font-bold;
 }
 
 .nav-link.active {
@@ -7,7 +7,7 @@
 }
 
 .nav-link:not(:first-of-type):not(:last-of-type) {
-  @apply mx-4;
+  @apply mx-6;
 }
 
 .container {

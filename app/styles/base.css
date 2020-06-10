@@ -24,5 +24,30 @@ body {
 }
 
 h1, .h1 {
-  @apply text-5xl font-serif mb-8 text-center;
+  @apply text-4xl font-serif mb-8 text-center;
+}
+
+h2, .h2 {
+  @apply text-3xl font-serif mb-8 text-center;
+}
+
+h3, .h3 {
+  @apply text-2xl font-serif mb-6 text-center;
+}
+
+h4, .h4 {
+  @apply text-lg font-serif mb-5 text-center;
+}
+
+p, .paragraph {
+  @apply mb-4;
+}
+
+@supports (text-align-last: left) {
+  p, .paragraph {
+    @apply text-justify;
+
+    text-align-last: left;
+    text-align-last: start;
+  }
 }

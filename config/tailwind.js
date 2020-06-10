@@ -31,12 +31,20 @@ module.exports = {
       ],
     },
 
+    fontSize: {
+      min: '112.5%',
+      max: '137.5%',
+      sm: '0.85rem',
+      md: '1rem',
+      lg: '1.5rem',
+      xl: '2rem',
+      '2xl': '2.2rem',
+      '3xl': '3rem',
+      '4xl': '3.6rem',
+    },
+
     // Extends //////////////////////////////////////////
     extend: {
-      fontSize: {
-        min: '112.5%',
-        max: '137.5%',
-      }
     },
   },
   variants: {},
