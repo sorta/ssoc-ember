@@ -1,0 +1,10 @@
+{
+  "data": {
+    "type": "managers",
+    "id": "personal",
+    "attributes": {
+      "name": "Personal",
+      "description": "Built by me in my spare time."
+    }
+  }
+}

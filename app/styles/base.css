@@ -52,10 +52,10 @@ p, .paragraph {
   }
 }
 
-dt {
+dt, .dt {
   @apply font-bold;
 }
 
-dd {
+dd, .dd {
   @apply ml-6 mb-2;
 }
