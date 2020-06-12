@@ -1,0 +1,19 @@
+{
+  "data": [{
+      "type": "projects",
+      "id": "wusata",
+      "attributes": {
+        "name": "WUSATA",
+        "url": "https://www.wusata.org/",
+        "img": "wusata",
+        "summary": "A large custom web app with complex business logic.",
+        "description": "WUSATA Description",
+        "highlights": ["Third party API integrations", "Data visualizations utilizing ZingChart", "Gulp script for minifying static assets"],
+        "links": [
+          { "title": "More Project Info", "url": "https://www.avibeweb.com/work/wusata/" },
+          { "title": "Live Site", "url": "https://www.wusata.org/" }
+        ]
+      }
+    }
+  ]
+}

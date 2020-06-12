@@ -1,1 +1,8 @@
+<h4>Work Manager</h4>
+<div class="container">
+  {{#if @model}}
+    <div class="text-center mb-8"><strong>{{@model.manager.name}}:</strong> {{@model.manager.description}}</div>
+  {{/if}}
+</div>
+
 {{outlet}}
