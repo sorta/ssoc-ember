@@ -2,6 +2,9 @@
 
 <div class="container">
   {{#each @model as |manager|}}
-    <div class="text-center mb-8"><strong>{{manager.name}}:</strong> {{manager.description}}</div>
+    <div class="text-center mb-8">
+      <LinkTo @route="work.manager" @model={{manager.id}}>{{manager.name}}:</LinkTo>
+      {{manager.description}}
+    </div>
   {{/each}}
 </div>
