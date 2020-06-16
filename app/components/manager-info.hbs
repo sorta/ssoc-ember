@@ -1,0 +1,13 @@
+<div class="mb-10">
+  <LinkTo @route='work.manager' @model={{@manager}}>
+    <h2 class="text-left font-normal">{{@manager.name}} Projects</h2>
+  </LinkTo>
+
+  {{html-safe @manager.description}}
+
+  {{#each @manager.projects as |project|}}
+    <h3>{{project.name}}</h3>
+  {{/each}}
+
+  {{yield}}
+</div>

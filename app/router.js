@@ -11,5 +11,6 @@ Router.map(function() {
   this.route('work', function() {
     this.route('manager', { path: '/:manager_id' });
   });
-  this.route('not-found', { path: '/*path' });
+  this.route('not-found');
+  this.route('wc-not-found', { path: '/*path' });
 });

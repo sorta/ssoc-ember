@@ -59,3 +59,7 @@ dt, .dt {
 dd, .dd {
   @apply ml-6 mb-2;
 }
+
+a[href] {
+  @apply font-bold;
+}
