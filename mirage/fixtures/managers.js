@@ -1,6 +1,6 @@
 export default [{
   id: 'avibe',
-  projectIds: ['wusata', 'avibe-site', 'green-hammer'],
+  projectIds: ['wusata', 'company-site', 'green-hammer'],
   name: 'A•Vibe',
   description: `
     I worked on many projects at

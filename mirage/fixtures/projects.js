@@ -19,7 +19,7 @@ export default [{
     { title: 'Live Site', url: 'https://www.wusata.org/' }
   ]
 }, {
-  id: 'avibe-site',
+  id: 'company-site',
   managerId: 'avibe',
   name: 'A•Vibe',
   url: 'https://www.avibeweb.com/',
