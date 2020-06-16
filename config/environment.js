@@ -1,5 +1,9 @@
 'use strict';
 
+const tailwindConfig = require('./tailwind.js');
+const resolveTwConfig = require('tailwindcss/resolveConfig');
+const tailwind = resolveTwConfig(tailwindConfig);
+
 module.exports = function(environment) {
   let ENV = {
     modulePrefix: 'ssoc-ember',
@@ -20,11 +24,23 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
-    }
-  };
+    },
 
-  ENV['ember-cli-mirage'] = {
-    enabled: true
+    tailwind,
+
+    'ember-cli-mirage': {
+      enabled: true
+    },
+
+    'responsive-image': {
+      sourceDir: 'images/generate',
+      destinationDir: 'images/responsive',
+      quality: 80,
+      supportedWidths: [1200, 800, 400],
+      removeSourceDir: true,
+      justCopy: false,
+      extensions: ['jpg', 'jpeg', 'png', 'gif']
+    }
   };
 
   if (environment === 'development') {

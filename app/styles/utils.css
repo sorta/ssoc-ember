@@ -1,3 +1,7 @@
 .colors-reverse {
   @apply bg-grey text-yellow;
 }
+
+.ellipses {
+  text-overflow: ellipsis;
+}
