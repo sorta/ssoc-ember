@@ -2,8 +2,8 @@
 <div class="container">
   {{#if @model}}
     <div class="text-center mb-8">
-      <strong>{{@model.manager.name}}:</strong>
-      {{@model.manager.description}}
+      <strong>{{@model.name}}:</strong>
+      {{html-safe @model.description}}
     </div>
   {{/if}}
 </div>
