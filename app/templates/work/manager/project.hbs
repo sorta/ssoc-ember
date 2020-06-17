@@ -1,1 +1,32 @@
-<h1>Project Details</h1>
+<h1>{{@model.name}} Project Details</h1>
+<div class="container">
+  <LinkExt @href={{@model.url}}>
+    <ProjectImage @project={{@model}} />
+  </LinkExt>
+  <div class="mt-1">
+    {{html-safe @model.description}}
+  </div>
+
+  {{#if @model.highlights}}
+    <div class="mb-6">
+      <h5 class="mb-1">Other Highlights</h5>
+      <ul class="ul">
+        {{#each @model.highlights as |highlight|}}
+          <li>{{highlight}}</li>
+        {{/each}}
+      </ul>
+    </div>
+  {{/if}}
+  <div class="flex justify-between">
+    <LinkTo @route='work.index'>Back to Work</LinkTo>
+    {{#if @model.links}}
+      <ul>
+        {{#each @model.links as |projectLink|}}
+          <li class="proj-link">
+            <LinkExt @href={{projectLink.url}}>{{projectLink.title}}</LinkExt>
+          </li>
+        {{/each}}
+      </ul>
+    {{/if}}
+  </div>
+</div>

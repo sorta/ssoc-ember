@@ -39,6 +39,10 @@ h4, .h4 {
   @apply text-lg font-serif mb-5 text-center;
 }
 
+h5, .h5 {
+  @apply font-serif mb-4 underline font-bold;
+}
+
 p, .paragraph {
   @apply mb-4;
 }

@@ -25,7 +25,7 @@ export default [{
   url: 'https://www.avibeweb.com/',
   img: 'avibe',
   summary: 'The most recent incarnation of the A•Vibe company site.',
-  desc: `<p>One area of the site that I was involved in was the Work List page, which you can see <a href="https://www.avibeweb.com/work/" target="_blank">here</a>.
+  description: `<p>One area of the site that I was involved in was the Work List page, which you can see <a href="https://www.avibeweb.com/work/" target="_blank">here</a>.
     Another area I was involved in was the top navigation, which you can see all over the site. I was the primary developer for both of these efforts, both of which
     used a fair amount of animation. And finally, this is another project where I was responsible for the Gulp script.</p>
   `,
@@ -39,7 +39,7 @@ export default [{
   url: 'http://www.greenhammer.com/',
   img: 'gh',
   summary: 'A responsive web app built from an older, non-responsive site.',
-  desc: '<p>I was the primary developer for much of the current site. That includes the layout, the landing page, the Portfolio pages, and the Insight pages.</p>',
+  description: '<p>I was the primary developer for much of the current site. That includes the layout, the landing page, the Portfolio pages, and the Insight pages.</p>',
   links: [
     { title: 'More Project Info', url: 'https://www.avibeweb.com/work/greenhammer/' },
     { title: 'Live Site', url: 'http://www.greenhammer.com/' }
@@ -51,7 +51,7 @@ export default [{
   url: 'https://www.sophieorta.com/',
   img: 'ssoc',
   summary: 'My personal website',
-  desc: `<p>I started to build this site in 2016, partially as a way to explore techniques and technologies.
+  description: `<p>I started to build this site in 2016, partially as a way to explore techniques and technologies.
     As a means of getting the site up and running quickly, I decided to forego the use of a DB for the initial implementation.
     The site is hosted on Digital Ocean, and uses Express.js, SCSS, Gulp, Pug, and Autoprefixer.</p>
   `,
@@ -65,5 +65,5 @@ export default [{
   url: 'https://headcanongenerator.com/',
   img: 'hcg',
   summary: 'Generates headcanons',
-  desc: '<p>An app that I used to explore working with React. It also utilizes Jest, Enzyme, PostCSS, and Firebase.</p>'
+  description: '<p>An app that I used to explore working with React. It also utilizes Jest, Enzyme, PostCSS, and Firebase.</p>'
 }];
