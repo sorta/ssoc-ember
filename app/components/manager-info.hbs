@@ -1,18 +1,18 @@
 <div class="mb-16">
-  <LinkTo @route='work.manager' @model={{@manager}}>
-    <h2 class="text-left font-normal">{{@manager.name}} Projects</h2>
+  <LinkTo @route='work.manager' @model={{@manager}} data-test-manager-title-link>
+    <h2 class="text-left font-normal" data-test-manager-title>{{@manager.name}} Projects</h2>
   </LinkTo>
 
-  <div class="mb-8">
+  <div class="mb-8" data-test-manager-desc>
     {{html-safe @manager.description}}
   </div>
 
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8" data-test-manager-projects-list>
     {{#each @manager.projects as |project|}}
-      <div class="w-full">
+      <div class="w-full" data-test-manager-project-list-item>
         <h3 class="text-left line-ellipses m-0" title={{project.name}}>{{project.name}}</h3>
         <LinkTo @route='work.manager.project' @models={{array @manager project}}>
-          <ResponsiveImage @image={{project.imgName}} alt="{{project.name}} screenshot" class="border-2 border-grey" />
+          <ProjectImage @project={{project}} />
         </LinkTo>
         <p>{{project.summary}}</p>
       </div>

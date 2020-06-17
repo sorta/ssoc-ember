@@ -1,26 +1,25 @@
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
 import { render } from '@ember/test-helpers';
+import { setupMirage } from 'ember-cli-mirage/test-support';
 import { hbs } from 'ember-cli-htmlbars';
+import projects from 'ssoc-ember/mirage/fixtures/projects';
+
+const firstProject = projects.firstObject;
 
 module('Integration | Component | project-image', function(hooks) {
   setupRenderingTest(hooks);
+  setupMirage(hooks);
 
   test('it renders', async function(assert) {
-    // Set any properties with this.set('myProperty', 'value');
-    // Handle any actions with this.set('myAction', function(val) { ... });
+    const store = this.owner.lookup('service:store');
+    const project = await store.findRecord('project', firstProject.id);
+    this.set('project', project);
 
-    await render(hbs`<ProjectImage />`);
+    await render(hbs`<ProjectImage @project={{project}} />`);
 
-    assert.equal(this.element.textContent.trim(), '');
-
-    // Template block usage:
-    await render(hbs`
-      <ProjectImage>
-        template block text
-      </ProjectImage>
-    `);
-
-    assert.equal(this.element.textContent.trim(), 'template block text');
+    assert.dom('[data-test-project-image]')
+      .exists()
+      .hasAttribute('alt', `${project.name} screenshot`);
   });
 });
