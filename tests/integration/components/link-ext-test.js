@@ -8,16 +8,18 @@ module('Integration | Component | link-ext', function(hooks) {
 
   test('it renders', async function(assert) {
 
-    await render(hbs`<LinkExt />`);
-
-    assert.equal(this.element.textContent.trim(), '');
+    this.extUrl = 'https://emberjs.com/';
 
     await render(hbs`
-      <LinkExt>
+      <LinkExt @href={{extUrl}}>
         template block text
       </LinkExt>
     `);
 
-    assert.equal(this.element.textContent.trim(), 'template block text');
+    assert.dom('[data-test-link-ext]')
+      .hasAttribute('href', this.extUrl, 'href attr is correct')
+      .hasAttribute('target', '_blank', 'target attr is correct')
+      .hasAttribute('rel', 'noopener noreferrer', 'rel attr is correct')
+      .hasText('template block text', 'content is correct');
   });
 });

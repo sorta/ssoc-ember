@@ -20,6 +20,7 @@ module('Integration | Component | project-image', function(hooks) {
 
     assert.dom('[data-test-project-image]')
       .exists()
-      .hasAttribute('alt', `${project.name} screenshot`);
+      .hasAttribute('alt', `${project.name} screenshot`)
+      .hasAttribute('src', `/images/responsive/${project.img}1200w.png`);
   });
 });
