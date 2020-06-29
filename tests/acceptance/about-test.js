@@ -11,5 +11,8 @@ module('Acceptance | about', function(hooks) {
     await a11yAudit();
 
     assert.equal(currentURL(), '/about');
+
+    assert.dom('[data-test-about-page-main]').exists();
+    assert.dom('[data-test-about-page-sidebar]').exists();
   });
 });
