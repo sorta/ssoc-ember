@@ -11,5 +11,10 @@ module('Acceptance | index', function(hooks) {
     await a11yAudit();
 
     assert.equal(currentURL(), '/');
+
+    assert.dom('[data-test-index-page-section-headline]').exists();
+    assert.dom('[data-test-index-page-section-details]').exists();
+    assert.dom('[data-test-index-page-section-links]').exists();
+    assert.dom('[data-test-index-page-link]').exists({ count: 3 });
   });
 });
