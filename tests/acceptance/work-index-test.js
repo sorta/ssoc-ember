@@ -9,20 +9,22 @@ import projects from 'ssoc-ember/mirage/fixtures/projects';
 const firstManager = managers.firstObject;
 const firstProject = projects.firstObject;
 
-module('Acceptance | work index', function(hooks) {
+module('Acceptance | work index', function (hooks) {
   setupApplicationTest(hooks);
   setupMirage(hooks);
 
-  test('visiting /work', async function(assert) {
+  test('visiting /work', async function (assert) {
     await visit('/work');
     await a11yAudit();
 
     assert.equal(currentURL(), '/work');
     assert.dom('[data-test-manager-title]').exists({ count: managers.length });
-    assert.dom('[data-test-manager-project-list-item]').exists({ count: projects.length });
+    assert
+      .dom('[data-test-manager-project-list-item]')
+      .exists({ count: projects.length });
   });
 
-  test('manager link works', async function(assert) {
+  test('manager link works', async function (assert) {
     await visit('/work');
     assert.equal(currentURL(), '/work');
 
@@ -30,11 +32,14 @@ module('Acceptance | work index', function(hooks) {
     assert.equal(currentURL(), `/work/${firstManager.id}`);
   });
 
-  test('project link works', async function(assert) {
+  test('project link works', async function (assert) {
     await visit('/work');
     assert.equal(currentURL(), '/work');
 
     await click(`[data-test-manager-project-link=${firstProject.id}]`);
-    assert.equal(currentURL(), `/work/${firstProject.managerId}/${firstProject.id}`);
+    assert.equal(
+      currentURL(),
+      `/work/${firstProject.managerId}/${firstProject.id}`,
+    );
   });
 });

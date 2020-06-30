@@ -1,4 +1,4 @@
-@import "fonts";
+@import 'fonts';
 
 :root,
 html {
@@ -8,7 +8,7 @@ html {
 @screen sm {
   :root,
   html {
-    font-size: calc(18px + (22 - 18) * ((100vw - 600px)/(1200 - 600)));
+    font-size: calc(18px + (22 - 18) * ((100vw - 600px) / (1200 - 600)));
   }
 }
 
@@ -23,32 +23,39 @@ body {
   @apply min-h-screen flex flex-col;
 }
 
-h1, .h1 {
+h1,
+.h1 {
   @apply text-4xl font-serif mb-8 text-center;
 }
 
-h2, .h2 {
+h2,
+.h2 {
   @apply text-3xl font-serif mb-8 text-center;
 }
 
-h3, .h3 {
+h3,
+.h3 {
   @apply text-2xl font-serif mb-6 text-center;
 }
 
-h4, .h4 {
+h4,
+.h4 {
   @apply text-lg font-serif mb-5 text-center;
 }
 
-h5, .h5 {
+h5,
+.h5 {
   @apply text-md font-serif mb-4 underline font-bold text-left;
 }
 
-p, .paragraph {
+p,
+.paragraph {
   @apply mb-4;
 }
 
 @supports (text-align-last: left) {
-  p, .paragraph {
+  p,
+  .paragraph {
     @apply text-justify;
 
     text-align-last: left;
@@ -56,11 +63,13 @@ p, .paragraph {
   }
 }
 
-dt, .dt {
+dt,
+.dt {
   @apply font-bold;
 }
 
-dd, .dd {
+dd,
+.dd {
   @apply ml-6 mb-2;
 }
 

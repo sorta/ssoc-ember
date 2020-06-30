@@ -8,20 +8,22 @@ import managers from 'ssoc-ember/mirage/fixtures/managers';
 const firstManager = managers.firstObject;
 const managerUrl = `/work/${firstManager.id}`;
 
-module('Acceptance | work/manager', function(hooks) {
+module('Acceptance | work/manager', function (hooks) {
   setupApplicationTest(hooks);
   setupMirage(hooks);
 
-  test('visiting /work/manager', async function(assert) {
+  test('visiting /work/manager', async function (assert) {
     await visit(managerUrl);
     await a11yAudit();
 
     assert.equal(currentURL(), managerUrl);
     assert.dom('[data-test-manager-title]').exists({ count: 1 });
-    assert.dom('[data-test-manager-project-list-item]').exists({ count: firstManager.projectIds.length });
+    assert
+      .dom('[data-test-manager-project-list-item]')
+      .exists({ count: firstManager.projectIds.length });
   });
 
-  test('project link works', async function(assert) {
+  test('project link works', async function (assert) {
     await visit(managerUrl);
     assert.equal(currentURL(), managerUrl);
 

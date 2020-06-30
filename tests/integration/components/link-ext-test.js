@@ -3,11 +3,10 @@ import { setupRenderingTest } from 'ember-qunit';
 import { render } from '@ember/test-helpers';
 import { hbs } from 'ember-cli-htmlbars';
 
-module('Integration | Component | link-ext', function(hooks) {
+module('Integration | Component | link-ext', function (hooks) {
   setupRenderingTest(hooks);
 
-  test('it renders', async function(assert) {
-
+  test('it renders', async function (assert) {
     this.extUrl = 'https://emberjs.com/';
 
     await render(hbs`
@@ -16,7 +15,8 @@ module('Integration | Component | link-ext', function(hooks) {
       </LinkExt>
     `);
 
-    assert.dom('[data-test-link-ext]')
+    assert
+      .dom('[data-test-link-ext]')
       .hasAttribute('href', this.extUrl, 'href attr is correct')
       .hasAttribute('target', '_blank', 'target attr is correct')
       .hasAttribute('rel', 'noopener noreferrer', 'rel attr is correct')

@@ -13,16 +13,8 @@ module.exports = {
     },
 
     fontFamily: {
-      sans: [
-        '"Roboto"',
-        'Helvetica',
-        'sans-serif',
-      ],
-      serif: [
-        '"Scope One"',
-        'Palatino',
-        'serif',
-      ],
+      sans: ['"Roboto"', 'Helvetica', 'sans-serif'],
+      serif: ['"Scope One"', 'Palatino', 'serif'],
     },
 
     fontSize: {
@@ -43,9 +35,8 @@ module.exports = {
     },
 
     // Extends //////////////////////////////////////////
-    extend: {
-    },
+    extend: {},
   },
   variants: {},
-  plugins: []
-}
+  plugins: [],
+};

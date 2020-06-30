@@ -2,7 +2,7 @@
 
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
-module.exports = function(defaults) {
+module.exports = function (defaults) {
   let app = new EmberApp(defaults, {
     postcssOptions: {
       compile: {
@@ -10,8 +10,8 @@ module.exports = function(defaults) {
         plugins: [
           { module: require('postcss-import') },
           require('tailwindcss')('./config/tailwind.js'),
-        ]
-      }
+        ],
+      },
     },
   });
 
