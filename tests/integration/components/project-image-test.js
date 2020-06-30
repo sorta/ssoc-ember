@@ -19,7 +19,6 @@ module('Integration | Component | project-image', function(hooks) {
     await render(hbs`<ProjectImage @project={{project}} />`);
 
     assert.dom('[data-test-project-image]')
-      .exists()
       .hasAttribute('alt', `${project.name} screenshot`)
       .hasAttribute('src', `/images/responsive/${project.img}1200w.png`);
   });

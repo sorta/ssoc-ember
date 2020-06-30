@@ -40,7 +40,7 @@ h4, .h4 {
 }
 
 h5, .h5 {
-  @apply font-serif mb-4 underline font-bold;
+  @apply text-md font-serif mb-4 underline font-bold text-left;
 }
 
 p, .paragraph {
