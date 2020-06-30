@@ -1,0 +1,13 @@
+<button
+  {{on 'click' this.goBack}}
+  type="button"
+  class="cursor-pointer"
+  data-test-button-back
+  ...attributes
+>
+  {{#if (has-block)}}
+    {{~ yield ~}}
+  {{else}}
+    Go Back
+  {{/if}}
+</button>

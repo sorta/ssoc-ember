@@ -1,0 +1,35 @@
+.nav-link {
+  @apply text-xl font-bold;
+}
+
+.nav-link.active {
+  @apply underline;
+}
+
+.nav-link:not(:first-of-type):not(:last-of-type) {
+  @apply mx-6;
+}
+
+.container {
+  @apply px-3;
+}
+
+.line-ellipses {
+  @apply overflow-hidden whitespace-no-wrap ellipses;
+}
+
+.ul {
+  @apply list-disc pl-6;
+}
+
+.proj-link {
+  @apply px-2 border-l-2 border-grey inline-block;
+}
+
+.proj-link:first-of-type {
+  @apply pl-0 border-l-0;
+}
+
+.proj-link:last-of-type {
+  @apply pr-0;
+}

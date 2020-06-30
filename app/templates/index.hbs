@@ -1,0 +1,38 @@
+<section class="min-h-screen flex flex-col items-center justify-center container" data-test-index-page-section-headline>
+  <h1 class="font-bold">People-first Web Development</h1>
+  <h2 class="h4 font-bold">I am a full-stack software engineer with a passion for front-end development.</h2>
+</section>
+
+<section class="min-h-screen w-full colors-reverse flex items-center justify-center" data-test-index-page-section-details>
+  <div class="container">
+    <h3 class="h2">Me</h3>
+
+    <p>
+      I've learned a lot in my {{this.years.devSpan}} years as a professional web developer. In that time, I've worked on
+      many systems of varying complexity, and I've become skilled in a wide variety of technologies and techniques.
+      But I also recognize that there are still (and probably always will be) things for me to learn and improve upon.
+      I love learning, so this actually works out well for me. One of my main goals as a developer is to always strive
+      for continuous improvement.
+    </p>
+    <p>
+      But skills aren't all that I have going for me. I also have a passion for web development in general, and front-end
+      development in particular. I regularly read articles and listen to podcasts to help myself stay current.
+      I care very much about the quality of things that I build.
+    </p>
+  </div>
+</section>
+
+<section class="min-h-screen flex flex-col items-center justify-center container" data-test-index-page-section-links>
+  <h3 class="h2">Connect</h3>
+  <div class="flex">
+    <LinkExt @href='https://www.linkedin.com/in/sorta' class="mx-4" title="LinkedIn" data-test-index-page-link="linkedin">
+      {{svg-jar 'linkedin' class="w-12 h-12" alt="LinkedIn Logo"}}
+    </LinkExt>
+    <LinkExt @href='https://github.com/sorta' class="mx-4" title="GitHub" data-test-index-page-link="github">
+      {{svg-jar 'github' class="w-12 h-12" alt="GitHub Logo"}}
+    </LinkExt>
+    <a href="mailto:orta.sophie@gmail.com" class="mx-4" title="Email" data-test-index-page-link="email">
+      {{svg-jar 'mail' class="w-12 h-12" alt="Email Icon"}}
+    </a>
+  </div>
+</section>

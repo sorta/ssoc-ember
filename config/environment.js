@@ -1,6 +1,10 @@
 'use strict';
 
-module.exports = function(environment) {
+const tailwindConfig = require('./tailwind.js');
+const resolveTwConfig = require('tailwindcss/resolveConfig');
+const tailwind = resolveTwConfig(tailwindConfig);
+
+module.exports = function (environment) {
   let ENV = {
     modulePrefix: 'ssoc-ember',
     environment,
@@ -13,14 +17,30 @@ module.exports = function(environment) {
       },
       EXTEND_PROTOTYPES: {
         // Prevent Ember Data from overriding Date.parse.
-        Date: false
-      }
+        Date: false,
+      },
     },
 
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
-    }
+    },
+
+    tailwind,
+
+    'ember-cli-mirage': {
+      enabled: true,
+    },
+
+    'responsive-image': {
+      sourceDir: 'images/generate',
+      destinationDir: 'images/responsive',
+      quality: 80,
+      supportedWidths: [1200, 800, 400],
+      removeSourceDir: true,
+      justCopy: false,
+      extensions: ['jpg', 'jpeg', 'png', 'gif'],
+    },
   };
 
   if (environment === 'development') {
